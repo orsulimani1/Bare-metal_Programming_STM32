@@ -1,0 +1,19 @@
+2025-03-16 04:36:09,890 [INFO] WebApp:194 - Connection lost
+2025-03-16 04:36:10,370 [INFO] WebApp:191 - Connection restablished
+2025-03-16 07:36:58,293 [INFO] WebApp:194 - Connection lost
+2025-03-16 07:36:58,625 [INFO] WebApp:191 - Connection restablished
+2025-03-16 08:25:15,088 [INFO] MainUpdater:2872 - connection check result : 10
+2025-03-16 08:25:15,196 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2025-03-16 08:25:15,200 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2025-03-16 08:25:15,200 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2025-03-16 08:25:17,276 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2025-03-16 08:25:17,276 [INFO] DetailPanel:341 - Set advertising image to C:/Users/admin/STM32Cube/Repository/\en.prom-stm32u3-mcu-finder.jpg
+2025-03-16 08:25:35,929 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2025-03-16 08:25:35,994 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2025-03-16 08:25:35,995 [INFO] DetailPanel:341 - Set advertising image to C:/Users/admin/STM32Cube/Repository/\en.prom-stm32u3-mcu-finder.jpg
+2025-03-16 08:25:39,569 [INFO] ApiDb:581 - Connected to CubeFinder SQLite database (C:\Users\admin\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2025-03-16 08:25:55,951 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2025-03-16 08:25:55,953 [INFO] ApiDb:448 - Save user favorites file C:\Users\admin/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2025-03-16 08:25:55,953 [INFO] ApiDb:452 - User favorites MCUs=[]
+2025-03-16 08:25:55,954 [INFO] ApiDb:448 - Save user favorites file C:\Users\admin/.stm32cubeide/favorites.boards.txt: 1 item(s)
+2025-03-16 08:25:55,955 [INFO] ApiDb:452 - User favorites Boards=[STM32F411E-DISCO]

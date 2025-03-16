@@ -1,0 +1,11 @@
+20:53:44 **** Rebuild of configuration Debug for project 03_operator_precedence ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operator_precedence.o" "..\\src\\operator_precedence.c" 
+..\src\operator_precedence.c: In function 'main':
+..\src\operator_precedence.c:27:24: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+   27 |     int complexExp = x + y << 2 - z;
+      |                      ~~^~~
+gcc -o 03_operator_precedence.exe "src\\operator_precedence.o" 
+
+20:53:45 Build Finished. 0 errors, 1 warnings. (took 589ms)
+

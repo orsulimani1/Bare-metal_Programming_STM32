@@ -1,0 +1,9 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:00_basic_data_types Debug,org.eclipse.launchbar.core.descriptorType.default\:hello_world_stm32_course.exe,org.eclipse.launchbar.core.descriptorType.default\:00_basic_data_types.exe,org.eclipse.launchbar.core.descriptorType.default\:01_Fixed-Width_Integers_Limits.exe,org.eclipse.launchbar.core.descriptorType.default\:02_operators_expressions.exe,org.eclipse.launchbar.core.descriptorType.default\:03_operator_precedence.exe,org.eclipse.launchbar.core.descriptorType.default\:04_storage_class_specifiers.exe
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:00_basic_data_types\ Debug/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:00_basic_data_types.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:hello_world_stm32_course.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:hello_world_stm32_course.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

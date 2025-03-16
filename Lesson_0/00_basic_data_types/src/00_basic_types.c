@@ -9,14 +9,20 @@
  */
 
 #include <stdio.h>
+#include <stdint.h>
 
 int main(void) {
     int counter = 100;
+    unsigned char u8 = 164;
     float temperature = 36.5f;
     double preciseValue = 3.141592653589793;
     char letter = 'A';
 
+    printf("counter: %d\n", counter++);
     printf("counter: %d\n", counter);
+    printf("counter: %u %d\n", u8, u8++);
+    printf("counter: %u\n", u8);
+
     printf("temperature: %.2f\n", temperature);
     printf("preciseValue: %lf\n", preciseValue);
     printf("letter: %c\n", letter);

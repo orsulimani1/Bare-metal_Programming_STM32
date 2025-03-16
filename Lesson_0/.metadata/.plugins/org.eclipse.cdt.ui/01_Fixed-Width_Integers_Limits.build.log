@@ -1,0 +1,7 @@
+20:43:55 **** Rebuild of configuration Debug for project 01_Fixed-Width_Integers_Limits ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\01_Fixed-Width_Integers_Limits.o" "..\\src\\01_Fixed-Width_Integers_Limits.c" 
+gcc -o 01_Fixed-Width_Integers_Limits.exe "src\\01_Fixed-Width_Integers_Limits.o" 
+
+20:43:56 Build Finished. 0 errors, 0 warnings. (took 665ms)
+
