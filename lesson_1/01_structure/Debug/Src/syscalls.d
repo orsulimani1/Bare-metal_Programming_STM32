@@ -1,2 +1,2 @@
-Src/syscalls.o: ../Src/syscalls.c ../Src/itm_debug.h
-../Src/itm_debug.h:
+Src/syscalls.o: ../Src/syscalls.c ../Inc/itm_debug.h
+../Inc/itm_debug.h:

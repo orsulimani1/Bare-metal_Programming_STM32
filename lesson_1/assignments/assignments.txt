@@ -1,0 +1,7 @@
+0. compile and build you own hello mcu
+1. create a loop that gets bit location from 0 , mask size, and opration and preform it on your dummy register
+    try to use function macros swtiches 
+
+2. copy this procet to an stm32 prject and read the elf .lst file 
+try to serach for your functions dissassembly
+3. got to chatgpt and askt it about 1 or more assembly cmds to convert to to humman languages 

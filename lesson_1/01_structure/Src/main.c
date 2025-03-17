@@ -18,6 +18,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
+
 struct sensor_data {
 	int32_t temperature;
     uint8_t status;
@@ -53,6 +54,7 @@ void modify_sensor2_data(struct sensor_data_packed *s2){
 
 int main(void) {
     struct sensor_data sensor1 = {25, 0x01, 1013};
+
     struct sensor_data_packed sensor2 = {.temperature = 25,
     									 .pressure = 1012,
 										 .status = 0x01 };

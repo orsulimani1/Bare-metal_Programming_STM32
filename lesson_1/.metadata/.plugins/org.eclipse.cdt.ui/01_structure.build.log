@@ -1,4 +1,4 @@
-21:51:31 **** Incremental Build of configuration Debug for project 01_structure ****
+20:53:01 **** Build of configuration Debug for project 01_structure ****
 make -j8 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
 arm-none-eabi-gcc "../Src/itm_debug.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411E_DISCO -c -I../Inc -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/itm_debug.d" -MT"Src/itm_debug.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/itm_debug.o"
@@ -17,5 +17,5 @@ Finished building: default.size.stdout
 Finished building: 01_structure.list
  
 
-21:51:31 Build Finished. 0 errors, 0 warnings. (took 514ms)
+20:53:03 Build Finished. 0 errors, 0 warnings. (took 1s.623ms)
 

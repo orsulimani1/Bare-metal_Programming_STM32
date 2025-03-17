@@ -9,7 +9,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-typedef struct {
+typedef struct ControlReg_ {
     uint32_t mode     : 3;  // 3 bits for mode
     uint32_t enabled  : 1;  // 1 bit for enable
     uint32_t reserved : 4;  // 4 bits reserved
@@ -19,7 +19,7 @@ typedef struct {
 
 typedef union DataConverter_ {
 	ControlReg_t bitfield_data;
-    uint32_t unsigned_data;
+    uint64_t unsigned_data;
 }__attribute__((packed)) DataConverter_t;
 
 int main(void) {

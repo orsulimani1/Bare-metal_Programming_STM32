@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  00002d2c  00000000  00000000  000047a5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000197c  00000000  00000000  000074d1  2**0
+ 18 .debug_line   00001983  00000000  00000000  000074d1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0000994d  00000000  00000000  00008e4d  2**0
+ 19 .debug_str    0000994d  00000000  00000000  00008e54  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  0001279a  2**0
+ 20 .comment      00000043  00000000  00000000  000127a1  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00000a10  00000000  00000000  000127e0  2**2
+ 21 .debug_frame  00000a10  00000000  00000000  000127e4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000063  00000000  00000000  000131f0  2**0
+ 22 .debug_line_str 00000063  00000000  00000000  000131f4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -209,9 +209,13 @@ void modify_sensor1_data(struct sensor_data *s1){
 	s1->status = 0x3;
  80002d0:	2303      	movs	r3, #3
  80002d2:	7103      	strb	r3, [r0, #4]
+//	 80002d0: 2303       movs	r3, #3
+//	 80002d2: 7103       strb	r3, [r0, #4]
 	s1->pressure = 1225;
  80002d4:	f240 43c9 	movw	r3, #1225	@ 0x4c9
  80002d8:	80c3      	strh	r3, [r0, #6]
+//	 80002d4: f44f 63c9  mov.w r3, #1225
+//	 80002d8: 8143       strh	r3, [r0, #6]
 }
  80002da:	4770      	bx	lr
 
@@ -221,11 +225,17 @@ void modify_sensor2_data(struct sensor_data_packed *s2){
 	s2->status = 0x3;
  80002dc:	2303      	movs	r3, #3
  80002de:	7103      	strb	r3, [r0, #4]
+//	 80002dc: 2303       movs	r3, #3
+//	 80002de: 7103       strb	r3, [r0, #4]
 	s2->pressure = 1225;
  80002e0:	f06f 0336 	mvn.w	r3, #54	@ 0x36
  80002e4:	7143      	strb	r3, [r0, #5]
  80002e6:	2304      	movs	r3, #4
  80002e8:	7183      	strb	r3, [r0, #6]
+//	 80002e0:  f44f 63c9  mov.w r3, #1225
+//	 80002e2: 7103       strb	r3, [r0, #5]
+//	 80002e0: 0b1b       lsrs	r3, r3, #8
+//	 80002e2: 7143       strb	r3, [r0, #5]
 }
  80002ea:	4770      	bx	lr
 
@@ -240,6 +250,7 @@ int main(void) {
  80002f2:	ac04      	add	r4, sp, #16
  80002f4:	e893 0003 	ldmia.w	r3, {r0, r1}
  80002f8:	e884 0003 	stmia.w	r4, {r0, r1}
+
     struct sensor_data_packed sensor2 = {.temperature = 25,
  80002fc:	3308      	adds	r3, #8
  80002fe:	e893 0003 	ldmia.w	r3, {r0, r1}

@@ -1,12 +1,4 @@
-21:51:31 **** Clean-only build of configuration Debug for project 01_structure ****
-make -j8 clean 
-rm -rf ./Startup/startup_stm32f411vetx.d ./Startup/startup_stm32f411vetx.o
-rm -rf ./Src/itm_debug.cyclo ./Src/itm_debug.d ./Src/itm_debug.o ./Src/itm_debug.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf 01_structure.elf 01_structure.list 01_structure.map default.size.stdout
-rm: can't remove '01_structure.elf': Permission denied
-make: [makefile:79: clean] Error 1 (ignored)
- 
-21:51:31 **** Incremental Build of configuration Debug for project 01_structure ****
+20:53:01 **** Build of configuration Debug for project 01_structure ****
 make -j8 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
 arm-none-eabi-gcc "../Src/itm_debug.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -DSTM32F411E_DISCO -c -I../Inc -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/itm_debug.d" -MT"Src/itm_debug.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/itm_debug.o"
