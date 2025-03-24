@@ -1,0 +1,10 @@
+18:42:36 **** Incremental Build of configuration Debug for project 04_type_qualifiers ****
+make -j16 all 
+arm-none-eabi-size  04_type_qualifiers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    756	      0	   1568	   2324	    914	04_type_qualifiers.elf
+Finished building: default.size.stdout
+ 
+
+18:42:36 Build Finished. 0 errors, 0 warnings. (took 135ms)
+

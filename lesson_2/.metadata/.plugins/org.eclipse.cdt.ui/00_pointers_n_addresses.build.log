@@ -1,0 +1,10 @@
+15:57:50 **** Incremental Build of configuration Debug for project 00_pointers_n_addresses ****
+make -j16 all 
+arm-none-eabi-size  00_pointers_n_addresses.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4976	     92	   1900	   6968	   1b38	00_pointers_n_addresses.elf
+Finished building: default.size.stdout
+ 
+
+15:57:50 Build Finished. 0 errors, 0 warnings. (took 138ms)
+

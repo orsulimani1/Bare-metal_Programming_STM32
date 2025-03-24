@@ -1,0 +1,2 @@
+../Src/itm_debug.c:18:6:ITM_SendChar	16	static
+../Src/itm_debug.c:33:5:_write	32	static

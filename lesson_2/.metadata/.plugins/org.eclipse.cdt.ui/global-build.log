@@ -1,0 +1,38 @@
+18:42:06 **** Build of configuration Debug for project 04_type_qualifiers ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411vetx.d" -MT"Startup/startup_stm32f411vetx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411vetx.o" "../Startup/startup_stm32f411vetx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O3 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O3 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411VETx -DSTM32 -DSTM32F4 -c -I../Inc -O3 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "04_type_qualifiers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\src\Bare-metal_Programming_STM32\lesson_2\04_type_qualifiers\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="04_type_qualifiers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 04_type_qualifiers.elf
+ 
+arm-none-eabi-size  04_type_qualifiers.elf 
+arm-none-eabi-objdump -h -S 04_type_qualifiers.elf  > "04_type_qualifiers.list"
+   text	   data	    bss	    dec	    hex	filename
+    756	      0	   1568	   2324	    914	04_type_qualifiers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 04_type_qualifiers.list
+ 
+18:42:11 **** Incremental Build of configuration Debug for project 04_type_qualifiers ****
+make -j16 all 
+arm-none-eabi-size  04_type_qualifiers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    756	      0	   1568	   2324	    914	04_type_qualifiers.elf
+Finished building: default.size.stdout
+ 
+18:42:23 **** Incremental Build of configuration Debug for project 04_type_qualifiers ****
+make -j16 all 
+arm-none-eabi-size  04_type_qualifiers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    756	      0	   1568	   2324	    914	04_type_qualifiers.elf
+Finished building: default.size.stdout
+ 
+18:42:36 **** Incremental Build of configuration Debug for project 04_type_qualifiers ****
+make -j16 all 
+arm-none-eabi-size  04_type_qualifiers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    756	      0	   1568	   2324	    914	04_type_qualifiers.elf
+Finished building: default.size.stdout
+ 

@@ -1,0 +1,10 @@
+16:49:41 **** Incremental Build of configuration Debug for project 02_ptr_advance ****
+make -j16 all 
+arm-none-eabi-size  02_ptr_advance.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5180	     92	   1900	   7172	   1c04	02_ptr_advance.elf
+Finished building: default.size.stdout
+ 
+
+16:49:41 Build Finished. 0 errors, 0 warnings. (took 136ms)
+
