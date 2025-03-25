@@ -23,7 +23,9 @@
 int main(void)
 {
 	int value = 42;
-	int *ptr = &value;
+	int *ptr;
+
+	ptr = &value;
 	printf("value %d ,&value 0x%x,\t*ptr %d ptr 0x%x\n", value, &value, *ptr, ptr);
 	*ptr = 100;    // Changes value to 100 through the pointer
 	printf("value %d ,&value 0x%x,\t*ptr %d ptr 0x%x\n", value, &value, *ptr, ptr); // Prints 100

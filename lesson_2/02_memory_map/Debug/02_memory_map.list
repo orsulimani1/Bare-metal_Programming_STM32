@@ -1,5 +1,5 @@
 
-03_memory_map.elf:     file format elf32-littlearm
+02_memory_map.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -88,9 +88,11 @@ int main(void)
  80001d8:	b480      	push	{r7}
  80001da:	b085      	sub	sp, #20
  80001dc:	af00      	add	r7, sp, #0
+
 	uint32_t *p_clk_ctrl_reg = (uint32_t *)(RCC_AHB1ENR);
  80001de:	4b10      	ldr	r3, [pc, #64]	@ (8000220 <main+0x48>)
  80001e0:	60fb      	str	r3, [r7, #12]
+//	uint32_t *p_clk_ctrl_ref = (uint32_t *)(0x40023830);
 	uint32_t *p_gpioD_mode_reg = (uint32_t *)(GPIOD_MODER);
  80001e2:	4b10      	ldr	r3, [pc, #64]	@ (8000224 <main+0x4c>)
  80001e4:	60bb      	str	r3, [r7, #8]

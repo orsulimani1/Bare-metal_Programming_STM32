@@ -31,7 +31,7 @@ int main(void)
 
 	// Pointers to the arrays
 	uint8_t  *p8  = u8_array;
-	uint8_t  *p10 = (u8_array + 4);
+	uint8_t  *p12 = &u8_array[3];
 	uint16_t *p16 = u16_array;
 	uint32_t *p32 = u32_array;
 
@@ -43,12 +43,11 @@ int main(void)
 	p8 += 2;   // Advances by 2 * sizeof(uint8_t)  = 2 bytes
 	p16 += 2;  // Advances by 2 * sizeof(uint16_t) = 4 bytes
 	p32 += 2;  // Advances by 2 * sizeof(uint32_t) = 8 bytes
+
 	printf("p8 address  0x%08X *p8  = 0x%08X\n", p8, *p8);     // Prints 0x33
 	printf("p16 address 0x%08X *p16 = 0x%08X\n", p16, *p16);   // Prints 0x5566
 	printf("p32 address 0x%08X *p32 = 0x%08X\n",p32,  *p32);   // Prints 0x99AABBCC
-	printf("p8 address  0x%08X p10 address 0x%08X addresses diff %d\n", p8, p10, p10-p8);
-
-
+	printf("p8 address  0x%08X p10 address 0x%08X addresses diff %d\n", p8, p12, p12-p8);
 
 	for(;;);
 }

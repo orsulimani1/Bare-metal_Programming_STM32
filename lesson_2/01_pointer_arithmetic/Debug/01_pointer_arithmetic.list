@@ -260,9 +260,9 @@ int main(void)
 	uint8_t  *p8  = u8_array;
  800032a:	f107 031c 	add.w	r3, r7, #28
  800032e:	62fb      	str	r3, [r7, #44]	@ 0x2c
-	uint8_t  *p10 = (u8_array + 4);
+	uint8_t  *p12 = &u8_array[3];
  8000330:	f107 031c 	add.w	r3, r7, #28
- 8000334:	3304      	adds	r3, #4
+ 8000334:	3303      	adds	r3, #3
  8000336:	62bb      	str	r3, [r7, #40]	@ 0x28
 	uint16_t *p16 = u16_array;
  8000338:	f107 0314 	add.w	r3, r7, #20
@@ -306,6 +306,7 @@ int main(void)
  8000378:	6a3b      	ldr	r3, [r7, #32]
  800037a:	3308      	adds	r3, #8
  800037c:	623b      	str	r3, [r7, #32]
+
 	printf("p8 address  0x%08X *p8  = 0x%08X\n", p8, *p8);     // Prints 0x33
  800037e:	6afb      	ldr	r3, [r7, #44]	@ 0x2c
  8000380:	781b      	ldrb	r3, [r3, #0]
@@ -327,7 +328,7 @@ int main(void)
  80003a0:	6a39      	ldr	r1, [r7, #32]
  80003a2:	480b      	ldr	r0, [pc, #44]	@ (80003d0 <main+0xc8>)
  80003a4:	f000 f98c 	bl	80006c0 <iprintf>
-	printf("p8 address  0x%08X p10 address 0x%08X addresses diff %d\n", p8, p10, p10-p8);
+	printf("p8 address  0x%08X p10 address 0x%08X addresses diff %d\n", p8, p12, p12-p8);
  80003a8:	6aba      	ldr	r2, [r7, #40]	@ 0x28
  80003aa:	6afb      	ldr	r3, [r7, #44]	@ 0x2c
  80003ac:	1ad3      	subs	r3, r2, r3

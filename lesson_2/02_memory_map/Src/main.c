@@ -24,8 +24,8 @@
 
 // GPIOD base addr 0x4002 0C00
 #define GPIOD_base_addr  (0x40020C00)
-#define GPIOD_MODER (GPIOD_base_addr + (0x0))
 // GPIOD mode register 0x00
+#define GPIOD_MODER (GPIOD_base_addr + (0x0))
 
 //GPIO D data output register offset GPIO port output data register (GPIOx_ODR) 0x14
 #define GPIOD_ODR (GPIOD_base_addr + (0x14))
@@ -33,7 +33,9 @@
 
 int main(void)
 {
+
 	uint32_t *p_clk_ctrl_reg = (uint32_t *)(RCC_AHB1ENR);
+//	uint32_t *p_clk_ctrl_ref = (uint32_t *)(0x40023830);
 	uint32_t *p_gpioD_mode_reg = (uint32_t *)(GPIOD_MODER);
 	uint32_t *p_gpioD_out_reg = (uint32_t *)(GPIOD_ODR);
 

@@ -235,7 +235,7 @@ int _write(int file, char *ptr, int len)
 08000308 <add>:
 #include <stdio.h>
 
-
+/********************* function pointers *******************/
 typedef int (*Operation)(int, int);
 
 int add(int a, int b) { return a + b; }
@@ -346,13 +346,14 @@ void updateVariable(int *p) {
 	...
 
 080003a8 <main>:
+/********************* end *******************/
 
 
 int main(){
  80003a8:	b580      	push	{r7, lr}
  80003aa:	b084      	sub	sp, #16
  80003ac:	af00      	add	r7, sp, #0
-
+	// pointer to pointer
 	int value = 42;
  80003ae:	232a      	movs	r3, #42	@ 0x2a
  80003b0:	60bb      	str	r3, [r7, #8]
@@ -374,6 +375,7 @@ int main(){
  80003c8:	4813      	ldr	r0, [pc, #76]	@ (8000418 <main+0x70>)
  80003ca:	f000 f99f 	bl	800070c <iprintf>
 
+	//	passing pointers to functions
 	int x = 5;
  80003ce:	2305      	movs	r3, #5
  80003d0:	603b      	str	r3, [r7, #0]
@@ -387,6 +389,7 @@ int main(){
  80003de:	480e      	ldr	r0, [pc, #56]	@ (8000418 <main+0x70>)
  80003e0:	f000 f994 	bl	800070c <iprintf>
 
+	//	function pointers
     printf("%d\n", calculate(5, 3, add));      // Prints 8
  80003e4:	4a0d      	ldr	r2, [pc, #52]	@ (800041c <main+0x74>)
  80003e6:	2103      	movs	r1, #3

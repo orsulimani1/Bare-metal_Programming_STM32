@@ -20,22 +20,29 @@
 
 //Address offset: 0x30 RCC_AHB1ENR
 //RRC base address 0x4002 3800
-#define RCC_AHB1ENR ((0x40023800) + (0x30))
+//#define RCC_AHB1ENR ((0x40023800) + (0x30))
+//
+//// GPIOD base addr 0x4002 0C00
+//#define GPIOD_base_addr  (0x40020C00)
+//#define GPIOD_MODER (GPIOD_base_addr + (0x0))
+//// GPIOD mode register 0x00
+//
+////GPIO D data output register offset GPIO port output data register (GPIOx_ODR) 0x14
+//#define GPIOD_ODR (GPIOD_base_addr + (0x14))
+//#define GPIO_OUTPUT_MODE 0x1
 
-// GPIOD base addr 0x4002 0C00
-#define GPIOD_base_addr  (0x40020C00)
-#define GPIOD_MODER (GPIOD_base_addr + (0x0))
-// GPIOD mode register 0x00
-
-//GPIO D data output register offset GPIO port output data register (GPIOx_ODR) 0x14
-#define GPIOD_ODR (GPIOD_base_addr + (0x14))
-#define GPIO_OUTPUT_MODE 0x1
+const uint32_t RCC_AHB1ENR      = ((0x40023800) + (0x30));
+const uint32_t GPIOD_BASE_ADDR  = (0x40020C00);
+const uint32_t GPIOD_MODER      = (GPIOD_BASE_ADDR + (0x0));
+const uint32_t GPIOD_ODR        = (GPIOD_BASE_ADDR + (0x14));
+const uint32_t GPIO_OUTPUT_MODE = 0x1;
 
 int main(void)
 {
+
 	uint32_t *p_clk_ctrl_reg = (uint32_t *)(RCC_AHB1ENR);
 	uint32_t *p_gpioD_mode_reg = (uint32_t *)(GPIOD_MODER);
-    volatile uint32_t * const p_gpioD_out_reg = (volatile uint32_t *)(GPIOD_ODR);
+	volatile uint32_t * const p_gpioD_out_reg = (volatile uint32_t *)(GPIOD_ODR);
 
 //	get the RRC value
 	*p_clk_ctrl_reg |= (0x1 << 3);
