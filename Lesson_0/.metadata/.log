@@ -864,3 +864,506 @@ org.eclipse.cdt.managedbuilder.core.BuildException: No toolchain option in toolc
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+!SESSION 2025-04-05 17:40:20.902 -----------------------------------------------
+eclipse.buildId=Version 1.18.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-04-05 18:10:04.445
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-04-05 18:10:04.446
+!MESSAGE Log4j2 initialized with config file C:\src\class_1\lesson_0\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-04-05 18:10:10.784
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:21.542
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:22.502
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-04-05 18:10:23.037
+!MESSAGE Error: Cannot run program "rm": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "rm": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:189)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.CommandBuilder.build(CommandBuilder.java:112)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.StepBuilder.build(StepBuilder.java:96)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.cleanWithInternalBuilder(CommonBuilder.java:1234)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1130)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1080)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-04-05 18:10:23.168
+!MESSAGE Error: Cannot run program "rm": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "rm": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:189)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.CommandBuilder.build(CommandBuilder.java:112)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.StepBuilder.build(StepBuilder.java:96)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.cleanWithInternalBuilder(CommonBuilder.java:1234)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1130)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1080)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-04-05 18:10:23.332
+!MESSAGE Error: Cannot run program "rm": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "rm": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:189)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.CommandBuilder.build(CommandBuilder.java:112)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.StepBuilder.build(StepBuilder.java:96)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.cleanWithInternalBuilder(CommonBuilder.java:1234)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1130)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1080)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:23.501
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:24.499
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:25.496
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:26.498
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:27.497
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:28.495
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:29.494
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:30.495
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:31.494
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-04-05 18:10:31.937
+!MESSAGE Error: Cannot run program "rm": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "rm": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:189)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.CommandBuilder.build(CommandBuilder.java:112)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.StepBuilder.build(StepBuilder.java:96)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.cleanWithInternalBuilder(CommonBuilder.java:1234)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1130)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1080)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-04-05 18:10:32.022
+!MESSAGE Error: Cannot run program "rm": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "rm": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:189)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.CommandBuilder.build(CommandBuilder.java:112)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.StepBuilder.build(StepBuilder.java:96)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.cleanWithInternalBuilder(CommonBuilder.java:1234)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1130)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1080)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:32.495
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:33.497
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:34.494
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:35.495
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-04-05 18:10:35.973
+!MESSAGE Error: Cannot run program "rm": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "rm": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:189)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.CommandBuilder.build(CommandBuilder.java:112)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.StepBuilder.build(StepBuilder.java:96)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.cleanWithInternalBuilder(CommonBuilder.java:1234)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1130)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1080)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-04-05 18:10:36.043
+!MESSAGE Error: Cannot run program "rm": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "rm": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:189)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.CommandBuilder.build(CommandBuilder.java:112)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.StepBuilder.build(StepBuilder.java:96)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.cleanWithInternalBuilder(CommonBuilder.java:1234)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1130)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1080)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-04-05 18:10:36.119
+!MESSAGE Error: Cannot run program "rm": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "rm": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:450)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:147)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:134)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory$Builder.start(ProcessFactory.java:273)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:366)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:189)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.CommandBuilder.build(CommandBuilder.java:112)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.StepBuilder.build(StepBuilder.java:96)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.cleanWithInternalBuilder(CommonBuilder.java:1234)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1130)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1080)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:36.493
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:37.494
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:38.493
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:39.493
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:40.493
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:41.496
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:42.493
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:43.499
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 4 0 2025-04-05 18:10:44.495
+!MESSAGE Failed to parse wmic output
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
+	at com.st.stm32cube.ide.mpu.remote.serial.internal.SerialPortProviderWindows.run(SerialPortProviderWindows.java:127)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)

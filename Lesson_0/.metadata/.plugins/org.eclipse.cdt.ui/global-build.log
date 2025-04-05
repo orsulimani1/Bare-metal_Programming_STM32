@@ -1,6 +1,24 @@
-20:57:35 **** Rebuild of configuration Debug for project 04_storage_class_specifiers ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\file_1.o" "..\\src\\file_1.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\file_2.o" "..\\src\\file_2.c" 
-gcc -o 04_storage_class_specifiers.exe "src\\file_1.o" "src\\file_2.o" 
-Info: Nothing to build for 04_storage_class_specifiers
+18:10:35 **** Clean-only build of configuration Debug for project 04_storage_class_specifiers ****
+rm -rf src/file_2.d 04_storage_class_specifiers.exe src/file_1.o src/file_2.o src/file_1.d 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\mingw64\bin;\bin;\usr\bin;C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.4.0.202409160955/jre/bin/server;C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.4.0.202409160955/jre/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\Orr\AppData\Local\Microsoft\WindowsApps;C:\Users\Orr\AppData\Local\Programs\Microsoft VS Code\bin;C:\mingw64\bin;;C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE]
+
+18:10:35 **** Clean-only build of configuration Debug for project 04_storage_class_specifiers ****
+18:10:36 **** Clean-only build of configuration Debug for project 05_decision_making_in_c ****
+rm -rf src/05_decision_making_in_c.o 05_decision_making_in_c.exe src/05_decision_making_in_c.d 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\mingw64\bin;\bin;\usr\bin;C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.4.0.202409160955/jre/bin/server;C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.4.0.202409160955/jre/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\Orr\AppData\Local\Microsoft\WindowsApps;C:\Users\Orr\AppData\Local\Programs\Microsoft VS Code\bin;C:\mingw64\bin;;C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE]
+
+18:10:36 **** Clean-only build of configuration Debug for project 05_decision_making_in_c ****
+18:10:36 **** Clean-only build of configuration Debug for project 06_functions_scopes_and_prototypes ****
+rm -rf src/06_functions_scopes_and_prototypes.d src/06_functions_scopes_and_prototypes.o 06_functions_scopes_and_prototypes.exe 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\mingw64\bin;\bin;\usr\bin;C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.4.0.202409160955/jre/bin/server;C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_3.4.0.202409160955/jre/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\Orr\AppData\Local\Microsoft\WindowsApps;C:\Users\Orr\AppData\Local\Programs\Microsoft VS Code\bin;C:\mingw64\bin;;C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE]
+
+18:10:36 **** Clean-only build of configuration Debug for project 06_functions_scopes_and_prototypes ****
