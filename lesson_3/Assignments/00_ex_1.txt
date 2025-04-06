@@ -1,0 +1,15 @@
+// Original unoptimized code
+void process_adc_data(uint16_t *adc_data, uint32_t length) {
+    uint32_t sum = 0;
+    for (uint32_t i = 0; i < length; i++) {
+        sum += adc_data[i];
+    }
+    
+    uint16_t average = sum / length;
+    
+    for (uint32_t i = 0; i < length; i++) {
+        adc_data[i] = adc_data[i] - average;
+    }
+}
+
+1. optimize that code
