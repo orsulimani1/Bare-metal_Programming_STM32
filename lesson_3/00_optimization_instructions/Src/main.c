@@ -38,7 +38,8 @@ uint32_t calculate_crc(uint8_t *data, uint32_t length) {
 int main(void)
 {
 	uint8_t a[2];
-	calculate_crc(a, 2);
+	int ret = calculate_crc(a, 2);
+	printf("ret %d", ret);
 	for(;;);
 }
 
