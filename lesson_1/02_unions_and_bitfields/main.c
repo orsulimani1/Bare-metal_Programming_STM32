@@ -23,7 +23,7 @@ typedef union DataConverter_ {
 }__attribute__((packed)) DataConverter_t;
 
 int main(void) {
-	DataConverter_t reg = {0};
+	DataConverter_t reg;
 
     // Set the mode to 5 (binary 101)
 	reg.bitfield_data.mode = 5;
