@@ -1,0 +1,2 @@
+how to calculate the stack size from withing the stack
+(hint... fault handler)

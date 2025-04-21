@@ -26,7 +26,7 @@ void change_access_level_unpriv(void)
 	//modify
 	__asm volatile ("ORR R0,R0,#0x01");
 	//write
-	__asm volatile ("MSR CONTROL,R0");
+//	__asm volatile ("MSR CONTROL,R0");
 
 }
 
@@ -42,6 +42,7 @@ int main(void)
 
    /* storing some address in the function pointer variable */
 	fun_ptr = change_access_level_unpriv;
+//	fun_ptr = (void*)0x8000260;
 
   /* Here the address  gets copied into PC
    * 0th bit of the address will be copied into T bit.

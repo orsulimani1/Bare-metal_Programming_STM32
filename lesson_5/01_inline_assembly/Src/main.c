@@ -29,13 +29,12 @@ int assembly_mul(int input){
 	return result;
 }
 
-void swap_and_add(uint32_t* ptr1, uint32_t* ptr2) {
+void swap(uint32_t ptr1, uint32_t ptr2) {
     uint32_t temp1, temp2;
 
     __asm volatile(
         "LDR %0, [%2]\n\t"    // Load from ptr1
         "LDR %1, [%3]\n\t"    // Load from ptr2
-        "ADD %0, %0, %1\n\t"  // Add values
         "STR %1, [%2]\n\t"    // Store ptr2's value to ptr1
         "STR %0, [%3]\n\t"    // Store sum to ptr2
         : "=&r" (temp1), "=&r" (temp2)  // Early clobber outputs
@@ -44,7 +43,7 @@ void swap_and_add(uint32_t* ptr1, uint32_t* ptr2) {
     );
 }
 
-uint32_t read_sp(void) {
+__attribute__((naked))uint32_t read_sp(void) {
     uint32_t sp_value;
     __asm volatile("MOV %0, sp" : "=r"(sp_value));
     return sp_value;  // Returns in R0 automatically
@@ -52,6 +51,7 @@ uint32_t read_sp(void) {
 
 int main(void)
 {
-    /* Loop forever */
+    uint32_t sp_read = read_sp();
+    sp_read++;
 	for(;;);
 }
