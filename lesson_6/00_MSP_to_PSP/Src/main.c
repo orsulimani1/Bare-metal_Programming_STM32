@@ -20,7 +20,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define TEST_IRQ     38  /* Maps to IRQ number 42 */
+#define TEST_IRQ     38  /* Maps to IRQ number 38 */
 
 uint32_t g_exc_return; // Store EXC_RETURN value
 
