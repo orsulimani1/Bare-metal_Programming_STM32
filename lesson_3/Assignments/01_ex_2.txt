@@ -1,4 +1,8 @@
-Exercise: Implement Robust Button Handling
+Exercise: 
+
+Debug the debounce delay example twice
+
+Implement Robust Button Handling
 Implement a button handling system that:
 
 Supports 3 buttons on different GPIO pins
