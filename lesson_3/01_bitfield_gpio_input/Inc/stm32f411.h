@@ -8,12 +8,12 @@
 #ifndef STM32F411_H_
 #define STM32F411_H_
 
-#define GPIOA_BASE_ADDR   (0x40020C00)
-#define GPIOB_BASE_ADDR   (0x40020C00)
-#define GPIOC_BASE_ADDR   (0x40020C00)
+#define GPIOA_BASE_ADDR   (0x40020000)
+#define GPIOB_BASE_ADDR   (0x40020400)
+#define GPIOC_BASE_ADDR   (0x40020800)
 #define GPIOD_BASE_ADDR   (0x40020C00)
-#define GPIOE_BASE_ADDR   (0x40020C00)
-#define GPIOH_BASE_ADDR   (0x40020C00)
+#define GPIOE_BASE_ADDR   (0x40021000)
+#define GPIOH_BASE_ADDR   (0x40021C00)
 #define RCC_BASE_ADDR 	  (0x40023800)
 
 
@@ -225,6 +225,28 @@ typedef struct {
 } GPIO_TypeDef;
 
 typedef struct {
+    volatile uint32_t HSION : 1;
+    volatile uint32_t HSIRDY : 1;
+    volatile uint32_t RESERVED : 1; // Reserved bits 1
+    volatile uint32_t HSITRIM : 4;
+    volatile uint32_t HSICAL : 7;
+    volatile uint32_t HSE_ON : 1;
+    volatile uint32_t MODER6 : 2;
+    volatile uint32_t MODER7 : 2;
+    volatile uint32_t MODER8 : 2;
+    volatile uint32_t MODER9 : 2;
+    volatile uint32_t MODER10 : 2;
+    volatile uint32_t MODER11 : 2;
+    volatile uint32_t MODER12 : 2;
+    volatile uint32_t MODER13 : 2;
+    volatile uint32_t MODER14 : 2;
+    volatile uint32_t MODER15 : 2;
+} RCC_CR_BitField;
+
+
+typedef struct {
+    volatile RCC_CR_BitField CR;    // Offset: 0x00
+    volatile RCC_CR_BitField PLLCFGR;
 } RCC_TypeDef;
 
 const uint32_t RCC_AHB1ENR      = ((0x40023800) + (0x30));

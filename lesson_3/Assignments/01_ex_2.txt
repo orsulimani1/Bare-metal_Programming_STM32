@@ -1,7 +1,14 @@
-Exercise: Implement Robust Button Handling
+Exercise: 
+
+Debug the debounce delay example twice
+
+Implement Robust Button Handling
 Implement a button handling system that:
 
 Supports 3 buttons on different GPIO pins
 Uses time-based debounce method
-Detects both press and release events
+run multi sample pin read
 Works efficiently in a main loop
+
+
+make the on read turn on a led

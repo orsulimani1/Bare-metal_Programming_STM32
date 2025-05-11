@@ -30,7 +30,7 @@ void setup_gpio_a_clock(){
 }
 
 int Delay(int count){
-	for (int var = 0;  var < count*1000; ++ var);
+	for (volatile int var = 0;  var < count*1000; ++ var);
 	return 1;
 }
 
@@ -60,7 +60,7 @@ uint8_t read_button_with_delay(void) {
 int main(void)
 {
 	setup_gpio_a_clock();
-	GPIOA->MODER.MODER0 = 0;
+	GPIOA->MODER.MODER0 = 0; // input mode
 	do{
 		read_button_with_delay();
 	} while(Delay(200));
