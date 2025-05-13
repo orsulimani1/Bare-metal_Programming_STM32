@@ -180,7 +180,7 @@ void init_tasks_stack(void)
 void init_systick_timer(uint32_t tick_hz)
 {
     /* Calculate SysTick reload value */
-    uint32_t reload_value = (SYSTICK_TIM_CLK/tick_hz) - 1;
+    uint32_t reload_value = (SYSTICK_TIM_CLK/tick_hz) - 1; //16000000 / 1000
 
     /* Configure SysTick */
     /* Reload value */
