@@ -263,7 +263,7 @@ void __attribute__((used)) Common_Handler(uint32_t *stack_frame, uint32_t fault_
     common_fault_handler(fault_type, stack_frame);
 }
 
-/* Function to trigger a memory management fault */
+/* Function to trigger a memory management fault */ // fix generate usage fault instead
 void trigger_memmanage_fault(void) {
     printf("Attempting to trigger MemManage fault...\n");
 

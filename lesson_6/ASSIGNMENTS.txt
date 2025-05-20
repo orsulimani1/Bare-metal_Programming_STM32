@@ -1,6 +1,10 @@
-1. Use the fault gen example to trigger bus fault, usage_fault and hardfault.
+1. Use the fault gen example to trigger bus fault, memmanage_fault and hardfault.
 then go to the fault analyzer and get the fault cause
 2. create your own nvic interrupt handler
 a. execute the interrupt handler
 b. call another interrupt from within the handler.
 c. clear that interrupt before execution means:  make sure it does not run.
+
+optional:
+Create a Stack frame analyzer
+on hardfault handler print the system stack function calling back trace

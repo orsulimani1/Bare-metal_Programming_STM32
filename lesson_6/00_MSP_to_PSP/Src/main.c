@@ -28,12 +28,12 @@
 #define SRAM_END            ((SRAM_START) + (SIZE_SRAM))
 
 uint32_t g_exc_return; // Store EXC_RETURN value
-uint32_t *pPSP = (uint32_t*)SRAM_END;
 
 /* Switch from MSP to PSP */
 __attribute__((naked)) void switch_sp_to_psp(void)
 {
-    //1. initialize the PSP with TASK1 stack start address
+    //1. initialize the PSP with stack start address
+	uint32_t *pPSP = (uint32_t*)SRAM_END;
 
 	//get the value of psp of current_task
 	__asm volatile ("PUSH {LR}"); //preserve LR which connects back to main()
@@ -130,7 +130,7 @@ int main(void)
 
 	printf("\n--- Stack Visualization Demo ---\n");
     /* Start first task by switching to PSP */
-    // switch_sp_to_psp();
+     switch_sp_to_psp();
 
     /* Enable the interrupt */
     NVIC_EnableIRQ(TEST_IRQ);
@@ -142,7 +142,7 @@ int main(void)
         stack_frame = (uint32_t *)__get_MSP();
     }
     /* Print the automatically stacked registers */
-    print_stack_frame(stack_frame);
+//    print_stack_frame(stack_frame);
     trigger_test_interrupt();
 
     /* Loop forever */
