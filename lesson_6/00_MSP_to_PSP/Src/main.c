@@ -22,7 +22,32 @@
 
 #define TEST_IRQ     38  /* Maps to IRQ number 38 */
 
+
+#define SRAM_START          0x20000000U
+#define SIZE_SRAM           ((128) * (1024))
+#define SRAM_END            ((SRAM_START) + (SIZE_SRAM))
+
 uint32_t g_exc_return; // Store EXC_RETURN value
+uint32_t *pPSP = (uint32_t*)SRAM_END;
+
+/* Switch from MSP to PSP */
+__attribute__((naked)) void switch_sp_to_psp(void)
+{
+    //1. initialize the PSP with TASK1 stack start address
+
+	//get the value of psp of current_task
+	__asm volatile ("PUSH {LR}"); //preserve LR which connects back to main()
+    __asm volatile ("MOV R0, %0" : : "r" (pPSP)); //move pPSP value to R0
+	__asm volatile ("MSR PSP,R0"); //initialize psp
+	__asm volatile ("POP {LR}");  //pops back LR value
+
+	//2. change SP to PSP using CONTROL register
+	__asm volatile ("MOV R0,#0X02");
+	__asm volatile ("MSR CONTROL,R0");
+	__asm volatile ("BX LR");
+}
+
+
 
 void print_stack_frame(volatile uint32_t *stack_frame);
 
@@ -104,8 +129,8 @@ int main(void)
     uint32_t *stack_frame;
 
 	printf("\n--- Stack Visualization Demo ---\n");
-	printf("Press the button connected to PA0 to trigger interrupt\n");
-
+    /* Start first task by switching to PSP */
+    // switch_sp_to_psp();
 
     /* Enable the interrupt */
     NVIC_EnableIRQ(TEST_IRQ);
