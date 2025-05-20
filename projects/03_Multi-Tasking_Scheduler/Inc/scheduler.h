@@ -45,6 +45,15 @@ typedef enum {
     TASK_TERMINATED
 } TaskState_t;
 
+
+typedef enum {
+    PRIORITY_LOW = 0,
+    PRIORITY_MEDIUM,
+    PRIORITY_HIGH,
+    PRIORITY_REALTIME
+} TaskPriority_t;
+
+
 /* Task Control Block */
 typedef struct {
     uint32_t *pStackPtr;      /* Current stack pointer for task */
@@ -52,6 +61,7 @@ typedef struct {
     TaskState_t state;        /* Current state of task */
     uint32_t taskID;          /* Unique task identifier */
     uint32_t wakeup_tick;     /* Tick count when task should wake up (if sleeping) */
+    TaskPriority_t priority;  /* Task priority level */
 } TCB_t;
 
 /* Scheduler Data Structure */

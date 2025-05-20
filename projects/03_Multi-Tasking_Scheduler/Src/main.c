@@ -1,5 +1,7 @@
 #include <stdint.h>
+#include <stdio.h>
 #include "scheduler.h"
+#include "stm32f411.h"
 
 /* Task function prototypes */
 void task1_handler(void);
@@ -11,10 +13,18 @@ void idle_task(void);
 /* Global variables */
 uint32_t g_tick_count = 0;
 Scheduler_t scheduler;
+uint32_t * ahb1_ctrl_reg = (uint32_t *)RCC_AHB1ENR;
+GPIO_TypeDef * gpio_d = (GPIO_TypeDef *)GPIOD_BASE_ADDR;
 
 int main(void)
 {
-    /* Initialize scheduler data structures */
+    *ahb1_ctrl_reg |= (4 << 1);
+    gpio_d->MODER.MODER12 = 1; // Task 1 LED
+    gpio_d->MODER.MODER13 = 1; // Task 2 LED
+    gpio_d->MODER.MODER14 = 1; // Task 3 LED
+    gpio_d->MODER.MODER15 = 1; // Task 4 LED
+
+	/* Initialize scheduler data structures */
     init_scheduler_stack(SCHED_STACK_START);
 
     /* Initialize task stacks with initial register values */
@@ -54,6 +64,7 @@ void init_tasks_stack(void)
 
     /* Task 1 initialization */
     scheduler.tasks[0].taskFunction = task1_handler;
+    scheduler.tasks[0].priority = PRIORITY_HIGH;
     pPSP = (uint32_t*)TASK1_STACK_START;
 
     /* Task stack frame (Cortex-M Exception stack frame) */
@@ -81,6 +92,7 @@ void init_tasks_stack(void)
 
     /* Task 2 initialization */
     scheduler.tasks[1].taskFunction = task2_handler;
+    scheduler.tasks[1].priority = PRIORITY_HIGH;
     pPSP = (uint32_t*)TASK2_STACK_START;
 
     pPSP--;
@@ -104,6 +116,8 @@ void init_tasks_stack(void)
 
     /* Task 3 initialization */
     scheduler.tasks[2].taskFunction = task3_handler;
+    scheduler.tasks[2].priority = PRIORITY_HIGH;
+
     pPSP = (uint32_t*)TASK3_STACK_START;
 
     pPSP--;
@@ -127,6 +141,8 @@ void init_tasks_stack(void)
 
     /* Task 4 initialization */
     scheduler.tasks[3].taskFunction = task4_handler;
+    scheduler.tasks[3].priority = PRIORITY_HIGH;
+
     pPSP = (uint32_t*)TASK4_STACK_START;
 
     pPSP--;
@@ -150,6 +166,7 @@ void init_tasks_stack(void)
 
     /* Idle task initialization */
     scheduler.tasks[4].taskFunction = idle_task;
+    scheduler.tasks[4].priority = PRIORITY_LOW;
     pPSP = (uint32_t*)IDLE_STACK_START;
 
     pPSP--;
@@ -269,31 +286,30 @@ void save_psp_value(uint32_t current_psp)
 /* Update task selection - implements round-robin */
 void update_next_task(void)
 {
-    /* Change current task state to READY */
-    scheduler.tasks[scheduler.currentTask].state = TASK_READY;
+    int8_t highest_priority = (scheduler.tasks[scheduler.currentTask].state == TASK_RUNNING)? scheduler.tasks[scheduler.currentTask].priority: -1;
+    uint32_t selected_task = scheduler.currentTask;
+	/* Change current task state to READY */
+	if(scheduler.tasks[scheduler.currentTask].state == TASK_RUNNING){
+		scheduler.tasks[scheduler.currentTask].state = TASK_READY;
+	}
 
-    /* Increment current task index */
-    scheduler.currentTask++;
-
-    /* Wrap around if reached end of task list */
-    if(scheduler.currentTask >= MAX_TASKS)
-    {
-        scheduler.currentTask = 0;
-    }
-
-    /* Skip blocked tasks */
     uint8_t count = 0;
-    while((scheduler.tasks[scheduler.currentTask].state != TASK_READY) && (count < MAX_TASKS))
+    uint8_t prop_next_task = scheduler.currentTask;
+    while((count < MAX_TASKS - 1))
     {
-        scheduler.currentTask++;
-        if(scheduler.currentTask >= MAX_TASKS)
-        {
-            scheduler.currentTask = 0;
-        }
+    	prop_next_task = (scheduler.currentTask+1) % (MAX_TASKS);
+
+		if(scheduler.tasks[prop_next_task].state == TASK_READY){
+			if((int8_t)scheduler.tasks[prop_next_task].priority > highest_priority){
+				highest_priority = (int8_t)scheduler.tasks[prop_next_task].priority;
+				selected_task = prop_next_task;
+			}
+		}
         count++;
     }
 
     /* Change new task state to RUNNING */
+    scheduler.currentTask = selected_task;
     scheduler.tasks[scheduler.currentTask].state = TASK_RUNNING;
 }
 
@@ -345,7 +361,8 @@ void task1_handler(void)
     while(1)
     {
         /* Toggle LED1 */
-        printf("Task 1 running - tick count: %lu\n", g_tick_count);
+//        printf("Task 1 running - tick count: %lu\n", g_tick_count);
+        gpio_d->ODR.ODR12 ^= 1;
         task_sleep(100);
     }
 }
@@ -355,7 +372,8 @@ void task2_handler(void)
     while(1)
     {
         /* Toggle LED2 */
-        printf("Task 2 running - tick count: %lu\n", g_tick_count);
+//        printf("Task 2 running - tick count: %lu\n", g_tick_count);
+        gpio_d->ODR.ODR13 ^= 1;
 
         task_sleep(200);
     }
@@ -366,7 +384,9 @@ void task3_handler(void)
     while(1)
     {
         /* Toggle LED3 */
-        printf("Task 3 running - tick count: %lu\n", g_tick_count);
+//        printf("Task 3 running - tick count: %lu\n", g_tick_count);
+        gpio_d->ODR.ODR14 ^= 1;
+
         task_sleep(300);
     }
 }
@@ -376,7 +396,8 @@ void task4_handler(void)
     while(1)
     {
         /* Toggle LED4 */
-        printf("Task 4 running - tick count: %lu\n", g_tick_count);
+//        printf("Task 4 running - tick count: %lu\n", g_tick_count);
+    	gpio_d->ODR.ODR15 ^= 1;
         task_sleep(400);
     }
 }

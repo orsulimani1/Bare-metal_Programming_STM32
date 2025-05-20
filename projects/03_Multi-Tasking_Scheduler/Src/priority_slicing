@@ -1,0 +1,111 @@
+/*
+ * priority_slicing.c
+ *
+ *  Created on: May 18, 2025
+ *      Author: Orr
+ */
+
+
+/* Add to scheduler.h */
+#define MAX_TIME_SLICES      3   /* Maximum consecutive slices for one priority level */
+#define PRIORITY_BOOST_TIME  10  /* Ticks before boosting starved tasks */
+
+/* Add to TCB structure */
+uint32_t time_slices;      /* Consecutive time slices used */
+uint32_t last_execution;   /* Last time task was executed */
+TaskPriority_t original_priority; /* Store original priority for restoration */
+
+/* Modify update_next_task for advanced scheduling */
+void update_next_task(void)
+{
+    uint32_t current_tick = g_tick_count;
+
+    /* First, check for starved tasks and boost their priority */
+    for(int i = 0; i < MAX_TASKS; i++)
+    {
+        if(scheduler.tasks[i].state == TASK_READY &&
+           (current_tick - scheduler.tasks[i].last_execution) > PRIORITY_BOOST_TIME)
+        {
+            /* Store original priority if not already boosted */
+            if(scheduler.tasks[i].priority != PRIORITY_HIGH) {
+                scheduler.tasks[i].original_priority = scheduler.tasks[i].priority;
+                scheduler.tasks[i].priority = PRIORITY_HIGH;
+            }
+        }
+    }
+
+    /* Check if current task can continue (hasn't used max slices and is still highest priority) */
+    if(scheduler.tasks[scheduler.currentTask].state == TASK_READY &&
+       scheduler.tasks[scheduler.currentTask].time_slices < MAX_TIME_SLICES)
+    {
+        /* Check if another task has higher priority */
+        bool higher_priority_exists = false;
+
+        for(int i = 0; i < MAX_TASKS; i++)
+        {
+            if(i != scheduler.currentTask &&
+               scheduler.tasks[i].state == TASK_READY &&
+               scheduler.tasks[i].priority > scheduler.tasks[scheduler.currentTask].priority)
+            {
+                higher_priority_exists = true;
+                break;
+            }
+        }
+
+        if(!higher_priority_exists)
+        {
+            /* Continue with current task */
+            scheduler.tasks[scheduler.currentTask].time_slices++;
+            scheduler.tasks[scheduler.currentTask].state = TASK_RUNNING;
+            return;
+        }
+    }
+
+    /* Reset time slices for current task */
+    scheduler.tasks[scheduler.currentTask].time_slices = 0;
+
+    /* Find highest priority READY task */
+    int8_t highest_priority = -1;
+    uint32_t selected_task = 0;
+
+    for(int i = 0; i < MAX_TASKS; i++)
+    {
+        if(scheduler.tasks[i].state == TASK_READY)
+        {
+            if((int8_t)scheduler.tasks[i].priority > highest_priority)
+            {
+                highest_priority = (int8_t)scheduler.tasks[i].priority;
+                selected_task = i;
+            }
+        }
+    }
+
+    /* If no READY tasks, run idle task */
+    if(highest_priority < 0)
+    {
+        /* Find idle task */
+        for(int i = 0; i < MAX_TASKS; i++)
+        {
+            if(scheduler.tasks[i].taskFunction == idle_task)
+            {
+                selected_task = i;
+                break;
+            }
+        }
+    }
+
+    /* Set new current task */
+    scheduler.currentTask = selected_task;
+    scheduler.tasks[scheduler.currentTask].state = TASK_RUNNING;
+    scheduler.tasks[scheduler.currentTask].last_execution = current_tick;
+    scheduler.tasks[scheduler.currentTask].time_slices = 1;
+
+    /* When restoring priority */
+    if(scheduler.tasks[scheduler.currentTask].priority == PRIORITY_HIGH &&
+       (current_tick - scheduler.tasks[scheduler.currentTask].last_execution) > PRIORITY_BOOST_TIME)
+    {
+        /* Restore original priority */
+        scheduler.tasks[scheduler.currentTask].priority =
+            scheduler.tasks[scheduler.currentTask].original_priority;
+    }
+}
